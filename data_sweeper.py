@@ -1,3 +1,10 @@
+try:
+    import plotly.express as px
+except ImportError:
+    import subprocess
+    subprocess.run(["pip", "install", "plotly"])
+    import plotly.express as px
+
 # data_sweeper.py
 import streamlit as st
 import pandas as pd
